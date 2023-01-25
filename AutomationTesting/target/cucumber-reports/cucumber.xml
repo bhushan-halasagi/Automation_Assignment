@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="66.262">
+<testcase classname="Verification of Login page functionality" name="To validate if the user has not entered any credentials." time="5.635">
+<system-out><![CDATA[Given User is on Login page.................................................passed
+And User Clicks on login button.............................................passed
+Then Invalid request message should appear..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of Login page functionality" name="To validate if user has entered only username" time="3.759">
+<system-out><![CDATA[Given User is on Login page.................................................passed
+And User enters only username with <"bhushanbsh@gmail.com">.................passed
+And User Clicks on login button.............................................passed
+Then Invalid request message should appear..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of Login page functionality" name="To validate if user has entered only password" time="4.595">
+<system-out><![CDATA[Given User is on Login page.................................................passed
+And User enters only password with <"Bhushan@123">..........................passed
+And User Clicks on login button.............................................passed
+Then Invalid request message should appear..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of Login page functionality" name="To validate if the user has entered the valid credentials and redirection happens to the home page." time="4.668">
+<system-out><![CDATA[Given User is on Login page.................................................passed
+And User enters username with <"bhushanbsh@gmail.com">......................passed
+And User enters password with <"Bhushan@123">...............................passed
+And User Clicks on login button.............................................passed
+Then User is logged in......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of Login page functionality" name="To validate if the user has entered the valid credentials and redirection happens to the home page. 2" time="6.949">
+<system-out><![CDATA[Given User is on Login page.................................................passed
+And User enters username with <"bhushanbsh@gmail.com">......................passed
+And User enters password with <"Bhushan@123">...............................passed
+And User Clicks on login button.............................................passed
+Then User is logged in......................................................passed
+Then User clicks on logout..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User want to order a product" name="User want to register" time="5.005">
+<system-out><![CDATA[Given User is on Register page..............................................passed
+And User enters Username with the <"bhushanhalasagi@gmail.com">.............passed
+And User enters Password with the <"Bhushan@123">...........................passed
+And User Clicks on Register button..........................................passed
+Then User is Registered.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User want to order a product" name="User want to register 2" time="4.428">
+<system-out><![CDATA[Given User is on Register page..............................................passed
+And User enters Username with the <"bhushan@gmail.com">.....................passed
+And User enters Password with the <"Bhushan@789">...........................passed
+And User Clicks on Register button..........................................passed
+Then User is Registered.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="I want to order a product" name="I want to order" time="11.917">
+<failure message="Driver must be set" type="java.lang.IllegalArgumentException"><![CDATA[Given I navigate to the login page..........................................passed
+When I submit username and password.........................................passed
+Then I should be logged in..................................................passed
+Given User is on Homepage...................................................passed
+When User clicks on orders..................................................passed
+And User clicks on go to shop...............................................passed
+Then User navigates to shopping page........................................passed
+Then User adds a price filter...............................................failed
+Then User clicks on filter..................................................skipped
+
+StackTrace:
+java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:56)
+	at org.openqa.selenium.interactions.Actions.<init>(Actions.java:67)
+	at com.stepdefinitions.App_SD.user_adds_a_price_filter(App_SD.java:119)
+	at ✽.User adds a price filter(file:///C:/Selenium/Workspace%20Eclipse/SwagLabs.zip_expanded/SwagLabs/src/test/resources/Features/app.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="I want to order a product" name="I want to change account details" time="9.593">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+When I submit username and password.........................................passed
+Then I should be logged in..................................................passed
+When User clicks on Account details.........................................passed
+Then User enters First Name with <"Bhushan">................................passed
+Then User enters Last Name with <"Halasagi">................................passed
+Then User clicks on Save Changes............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="I want to order a product" name="I want to change password" time="9.506">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+When I submit username and password.........................................passed
+Then I should be logged in..................................................passed
+When User clicks on Account details.........................................passed
+Then User enters First Name with <"Bhushan">................................passed
+Then User enters Last Name with <"Halasagi">................................passed
+Then User enters Old Password with <"Bhushan@123">..........................passed
+Then User enters New Password with <"Bhushan@123">..........................passed
+Then User enters New Password again with <"Bhushan@123">....................passed
+Then User clicks on Save Changes............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
